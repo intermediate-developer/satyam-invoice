@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invoice Studio · Satyam Singh</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="print.css" media="print">
+  <script defer src="database.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <aside>
+      <div class="brand"><span>IS</span><div>Invoice Studio<small>Satyam Singh</small></div></div>
+      <nav aria-label="Workspace">
+        <button data-page="dashboard">Dashboard</button>
+        <button data-page="projects">Projects</button>
+        <button data-page="payments">Payment Tracker</button>
+        <button data-page="history">Invoice History</button>
+        <button data-page="clients">Clients</button>
+        <button data-page="settings">Business Settings</button>
+        <button data-page="backup">Backup &amp; Restore</button>
+      </nav>
+      <div class="local"><i></i> Offline workspace</div>
+    </aside>
+    <main>
+      <header class="top"><span>Workspace <b>/</b> <span id="crumb">Dashboard</span></span><button id="theme" type="button">Switch theme</button></header>
+      <section id="view" aria-live="polite">Opening local records…</section>
+    </main>
+  </div>
+  <dialog id="modal"><div id="modal-body"></div></dialog>
+  <div id="notice" role="status"></div>
+  <article id="paper" class="paper" aria-label="Printable document"></article>
+</body>
+</html>
